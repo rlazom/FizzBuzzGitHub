@@ -1,6 +1,7 @@
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class FizzBuzzTests {
@@ -22,4 +23,12 @@ public class FizzBuzzTests {
     public void testShouldBeDivisibleByThreeAndFive(int number) {
         assertTrue(FizzBuzz.isDivisibleByThreeAndFive(number), String.format("The number %s is not divisible by three and five", number));
     }
+
+
+    @ParameterizedTest(name = "#{index} - Run test with number args={0}")
+    @ValueSource(ints = {15, 30, 60, 90})
+    public void testShouldReturnFizzBuzz(int number){
+        assertEquals("FizzBuzz", FizzBuzz.fizzBuzz(number),  "Doesn't return FizzBuzz for number: " + number);
+    }
+
 }

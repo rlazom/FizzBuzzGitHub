@@ -32,4 +32,23 @@ public class FizzBuzz {
     public static boolean isDivisibleByThreeAndFive(int number) {
         return number % 15 == 0;
     }
+
+    /**
+     * Resolve the proper word for FizzBuzz
+     *
+     * @param number: number to check the divisibility
+     * @return String: Fizz, Buzz, FizzBuzz or the number base on its divisibility
+     */
+    public static String fizzBuzz(int number) {
+        if (isDivisibleByThreeAndFive(number)) {
+            return "FizzBuzz";
+        }
+        if (isDivisibleByThree(number)) {
+            return "Buzz";
+        }
+        if (isDivisibleByFive(number)) {
+            return "Fizz";
+        }
+        return String.valueOf(number);
+    }
 }
