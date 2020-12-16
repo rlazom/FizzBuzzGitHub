@@ -3,6 +3,7 @@ jdk:
   - openjdk8
 env:
   - MVN_VERSION=3.8.0
+sudo: false
 cache:
   directories:
     - $HOME/.m2
