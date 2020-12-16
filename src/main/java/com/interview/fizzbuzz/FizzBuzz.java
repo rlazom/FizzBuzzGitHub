@@ -1,25 +1,22 @@
 package com.interview.fizzbuzz;
 
-import java.io.BufferedOutputStream;
-import java.io.IOException;
-import java.io.OutputStream;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class FizzBuzz {
+
+    private static Logger logger = LoggerFactory.getLogger(FizzBuzz.class);
 
 
     /**
      * Main method that output Fizz, Buzz, FizzBuzz or the Number it self
      *
      * @param args : possible arguments
-     * @throws IOException: It may through an IO exception
      */
-    public static void main(String[] args) throws IOException {
-        OutputStream outputStream = new BufferedOutputStream(System.out);
+    public static void main(String[] args) {
         for (int i = 1; i <= 100; i++) {
-            outputStream.write((fizzBuzz(i) + "\n").getBytes());
-            outputStream.flush();
+            logger.info(fizzBuzz(i));
         }
-        outputStream.close();
     }
 
     /**
