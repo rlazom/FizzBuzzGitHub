@@ -9,6 +9,7 @@ public class FizzBuzz {
 
     /**
      * Main method that output Fizz, Buzz, FizzBuzz or the Number it self
+     * Note: using a logger tool like Log4j2 is a way slow compare to BufferedOutput on console
      *
      * @param args : possible arguments
      * @throws IOException: It may through an IO exception
