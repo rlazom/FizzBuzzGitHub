@@ -22,4 +22,14 @@ public class FizzBuzz {
     public static boolean isDivisibleByFive(int number) {
         return number % 5 == 0;
     }
+
+    /**
+     * Determine if the number is divisible by three and five
+     *
+     * @param number: number to check the divisibility
+     * @return boolean: true or false if is divisible by three and five
+     */
+    public static boolean isDivisibleByThreeAndFive(int number) {
+        return number % 15 == 0;
+    }
 }

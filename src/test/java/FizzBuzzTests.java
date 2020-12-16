@@ -16,4 +16,10 @@ public class FizzBuzzTests {
     public void testShouldBeDivisibleByFive(int number) {
         assertTrue(FizzBuzz.isDivisibleByFive(number), String.format("The number %s is not divisible by five", number));
     }
+
+    @ParameterizedTest(name = "#{index} - Run test with number args={0}")
+    @ValueSource(ints = {15, 30, 60, 90})
+    public void testShouldBeDivisibleByThreeAndFive(int number) {
+        assertTrue(FizzBuzz.isDivisibleByThreeAndFive(number), String.format("The number %s is not divisible by three and five", number));
+    }
 }
