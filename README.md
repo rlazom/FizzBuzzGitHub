@@ -10,6 +10,11 @@ Java SDK 1.8 or later and Maven 3.6
 ## Execution
 On Linux
 ```bash 
-mvn package
+mvn clean install
 java -jar target/FizzBuzz-1.0-SNAPSHOT.jar
+```
+
+## Test
+```bash
+mvn test
 ```
