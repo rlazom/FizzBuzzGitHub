@@ -13,7 +13,11 @@ On Linux
 mvn clean install
 java -jar target/FizzBuzz-1.0-SNAPSHOT.jar
 ```
-
+On Docker
+```bash
+docker build -t fizzbuzz:1.0 .
+docker run --rm -it fizzbuzz:1.0
+```
 ## Test
 ```bash
 mvn test
