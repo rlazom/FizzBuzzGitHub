@@ -1,6 +1,17 @@
+import java.io.BufferedOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+
 public class FizzBuzz {
 
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws IOException {
+        OutputStream outputStream = new BufferedOutputStream(System.out);
+        for (int i = 1; i <= 100; i++) {
+            outputStream.write((fizzBuzz(i) + "\n").getBytes());
+            outputStream.flush();
+        }
+        outputStream.close();
     }
 
     /**

@@ -1,5 +1,12 @@
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
+
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.PrintStream;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -47,5 +54,24 @@ public class FizzBuzzTests {
     @ValueSource(ints = {1, 2, 4, 88,22, 43,7})
     public void testShouldReturnTheNumber(int number){
         assertEquals(String.valueOf(number), FizzBuzz.fizzBuzz(number),  "Doesn't return " + number);
+    }
+
+    @Test
+    public void testShouldPrintFizzOrBuzzOrFizzBuzzOrTheNumber() throws IOException {
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        ByteArrayOutputStream errContent = new ByteArrayOutputStream();
+
+        System.setOut(new PrintStream(outContent));
+        System.setErr(new PrintStream(errContent));
+        String output = Stream.iterate(1, n -> n +1)
+                .limit(100)
+                .map(FizzBuzz::fizzBuzz)
+                .collect(Collectors.joining("\n"));
+        FizzBuzz.main(null);
+        assertEquals(output + "\n", outContent.toString(), "Error matching output");
+
+        System.setOut(System.out);
+        System.setErr(System.err);
+
     }
 }
