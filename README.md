@@ -1,4 +1,5 @@
-[![Build Status](https://travis-ci.com/joaomlneto/travis-ci-tutorial-java.svg?branch=master)](https://travis-ci.com/joaomlneto/travis-ci-tutorial-java)
+[![Build Status](https://travis-ci.com/oclay1st/FizzBuzz.svg?branch=develop)](https://travis-ci.com/github/oclay1st/FizzBuzz)
+[![codecov](https://codecov.io/gh/oclay1st/FizzBuzz/branch/develop/graph/badge.svg)](https://codecov.io/gh/oclay1st/FizzBuzz) 
 
 # FizzBuzz
 
