@@ -44,10 +44,10 @@ public class FizzBuzz {
             return "FizzBuzz";
         }
         if (isDivisibleByThree(number)) {
-            return "Buzz";
+            return "Fizz";
         }
         if (isDivisibleByFive(number)) {
-            return "Fizz";
+            return "Buzz";
         }
         return String.valueOf(number);
     }
