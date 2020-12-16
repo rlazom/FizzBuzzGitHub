@@ -10,4 +10,10 @@ public class FizzBuzzTests {
     public void testShouldBeDivisibleByThree(int number) {
         assertTrue(FizzBuzz.isDivisibleByThree(number), String.format("The number %s is not divisible by three", number));
     }
+
+    @ParameterizedTest(name = "#{index} - Run test with number args={0}")
+    @ValueSource(ints = {5, 10, 55, 90, 65})
+    public void testShouldBeDivisibleByFive(int number) {
+        assertTrue(FizzBuzz.isDivisibleByFive(number), String.format("The number %s is not divisible by five", number));
+    }
 }

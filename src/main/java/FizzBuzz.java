@@ -13,4 +13,13 @@ public class FizzBuzz {
         return number % 3 == 0;
     }
 
+    /**
+     * Determine if the number is divisible by five
+     *
+     * @param number: number to check the divisibility
+     * @return boolean: true or false if is divisible by five
+     */
+    public static boolean isDivisibleByFive(int number) {
+        return number % 5 == 0;
+    }
 }
