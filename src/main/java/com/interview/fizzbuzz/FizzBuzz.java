@@ -1,3 +1,5 @@
+package com.interview.fizzbuzz;
+
 import java.io.BufferedOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
