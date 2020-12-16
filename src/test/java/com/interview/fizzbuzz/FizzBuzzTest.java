@@ -60,20 +60,20 @@ public class FizzBuzzTest {
 
     @Test
     public void testShouldPrintFizzOrBuzzOrFizzBuzzOrTheNumber() throws IOException {
-//        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-//        ByteArrayOutputStream errContent = new ByteArrayOutputStream();
-//
-//        System.setOut(new PrintStream(outContent));
-//        System.setErr(new PrintStream(errContent));
-//        String output = Stream.iterate(1, n -> n + 1)
-//                .limit(100)
-//                .map(FizzBuzz::fizzBuzz)
-//                .collect(Collectors.joining("\n"));
-//        FizzBuzz.main(null);
-//        assertEquals(output + "\n", outContent.toString(), "Error matching output");
-//
-//        System.setOut(System.out);
-//        System.setErr(System.err);
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        ByteArrayOutputStream errContent = new ByteArrayOutputStream();
+
+        System.setOut(new PrintStream(outContent));
+        System.setErr(new PrintStream(errContent));
+        String output = Stream.iterate(1, n -> n + 1)
+                .limit(100)
+                .map(FizzBuzz::fizzBuzz)
+                .collect(Collectors.joining("\n"));
+        FizzBuzz.main(null);
+        assertEquals(output + "\n", outContent.toString(), "Error matching output");
+
+        System.setOut(System.out);
+        System.setErr(System.err);
 
     }
 }
