@@ -36,4 +36,10 @@ public class FizzBuzzTests {
     public void testShouldReturnFizz(int number){
         assertEquals("Fizz", FizzBuzz.fizzBuzz(number),  "Doesn't return Fizz for number: " + number);
     }
+
+    @ParameterizedTest(name = "#{index} - Run test with number args={0}")
+    @ValueSource(ints = {5, 25, 50, 100})
+    public void testShouldReturnBuzz(int number){
+        assertEquals("Buzz", FizzBuzz.fizzBuzz(number),  "Doesn't return Buzz for number: " + number);
+    }
 }
