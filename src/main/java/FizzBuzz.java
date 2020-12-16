@@ -5,6 +5,12 @@ import java.io.OutputStream;
 public class FizzBuzz {
 
 
+    /**
+     * Main method that output Fizz, Buzz, FizzBuzz or the Number it self
+     *
+     * @param args : possible arguments
+     * @throws IOException: It may through an IO exception
+     */
     public static void main(String[] args) throws IOException {
         OutputStream outputStream = new BufferedOutputStream(System.out);
         for (int i = 1; i <= 100; i++) {
